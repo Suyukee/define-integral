@@ -1,9 +1,11 @@
 function App() {
   return (
-    <div className="App">
-      <h1>Мой диплом!</h1>
-      <p>Ну типа тут вычисления и графики</p>
-      <p>График график график</p>
+    <div className="wrapper">
+      <h1>Калькулятор приближённого вычисления определённых интегралов</h1>
+      <div className="graphic">График</div>
+      <div className="content">
+        Поле поле поле
+      </div>
     </div>
   );
 }
