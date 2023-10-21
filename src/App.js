@@ -8,6 +8,8 @@ function App() {
   const [limitB, setLimitB] = useState('10');
   const [num, setNum] = useState('10');
 
+  let result = <LeftRectangle f={func} a={limitA} b={limitB} n={num} />;
+
   return (
     <div className="wrapper">
       <header>
@@ -19,25 +21,27 @@ function App() {
         
 
         <form>
-
-          <select id="method">
-            <option value={1}>Левых прямоугольников</option>
-            <option value={2}>Правых прямоугольников</option>
-          </select>
-
+          <div className="method">
+            <p>Метод</p>
+            <select>
+              <option value={1}>Левых прямоугольников</option>
+              <option value={2}>Правых прямоугольников</option>
+            </select>
+          </div>
+          
           <div className="func">
-            <p>f(x) =</p>
+            <p>f(x):</p>
             <input 
               type="text" 
               required
-              value={func} 
+              value={func}
               onChange={(e) => setFunc(e.target.value)}
             />
           </div>
 
           <div className="limit">
             <div className="limit-a">
-              <p>a =</p>
+              <p>a:</p>
               <input 
                 type="number" 
                 required
@@ -47,7 +51,7 @@ function App() {
             </div>
 
             <div className="limit-b">
-              <p>b =</p>
+              <p>b:</p>
               <input 
                 type="number" 
                 required
@@ -58,7 +62,7 @@ function App() {
           </div>
 
           <div className="num">
-            <p>n =</p>
+            <p>n:</p>
             <input 
               type="number"
               required 
@@ -80,9 +84,12 @@ function App() {
           <p>{ limitB }</p>
           <p>{ num }</p>
           <p>{ func }</p> */}
-          <div>
+
+          {/* <div>
             <LeftRectangle f={func} a={limitA} b={limitB} n={num} />
-          </div>
+          </div> */}
+
+          <p className="result">Результат: { result }</p>
 
         </form>
 
