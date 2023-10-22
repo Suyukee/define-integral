@@ -71,9 +71,11 @@ select {
   font-size: 16px;
   padding-left: 35px;
   margin: 15px 0;
+  margin-left: -20px;
 
   border: 2px solid #e9f2ff;
   border-radius: 5px;
+  background-color:#fff;
 }
 
 option:checked {
