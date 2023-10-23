@@ -22,7 +22,7 @@ function App() {
 
         <form>
           <div className="method">
-            <p>Метод</p>
+            <p>Квадратурная функция</p>
             <select>
               <option value={1}>Левых прямоугольников</option>
               <option value={2}>Правых прямоугольников</option>
@@ -30,7 +30,7 @@ function App() {
           </div>
           
           <div className="func">
-            <p>f(x):</p>
+            <p>Подынтегральная функция f(x)</p>
             <input 
               type="text" 
               required
@@ -41,7 +41,7 @@ function App() {
 
           <div className="limit">
             <div className="limit-a">
-              <p>a:</p>
+              <p>Начальная граница</p>
               <input 
                 type="number" 
                 required
@@ -51,7 +51,7 @@ function App() {
             </div>
 
             <div className="limit-b">
-              <p>b:</p>
+              <p>Конечная граница</p>
               <input 
                 type="number" 
                 required
@@ -61,15 +61,29 @@ function App() {
             </div>
           </div>
 
-          <div className="num">
-            <p>n:</p>
-            <input 
-              type="number"
-              required 
-              value={num}
-              onChange={(e) => setNum(e.target.value)} 
-            />
+          <div className="num-btn">
+
+            <div className="num">
+
+              <p>Число интервалов</p>
+
+              <input 
+                type="number"
+                required 
+                value={num}
+                onChange={(e) => setNum(e.target.value)} 
+              />
+            </div>
+
+
+            <div className="btn">
+              <button>
+                Вычислить
+              </button>
+            </div>
+
           </div>
+
 
           {/* <div className="float">
             <p>Знаков после запятой:</p>
@@ -89,7 +103,7 @@ function App() {
             <LeftRectangle f={func} a={limitA} b={limitB} n={num} />
           </div> */}
 
-          <p className="result">Результат: { result }</p>
+          <p className="result">Результат = { result }</p>
 
         </form>
 

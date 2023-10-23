@@ -12,10 +12,10 @@ p{
 }
 
 .wrapper {
-  background-color: #fff;
+  background-color: #f7f8f8;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
   border-radius: 20px;
-  max-width: 1080px;
+  max-width: 900px;
   margin: 50px auto;
 }
 
@@ -30,27 +30,26 @@ header {
   padding: 40px;
 
   p {
-    margin: 0;
-    margin-left: 15px;
+    margin: 3px;
+    margin-left: -5px;
     padding: 5px;
     position: absolute;
     color: rgb(0, 92, 148);
-    background-color: #fff;
+    background-color: #f7f8f8;
+    font-size: 14px;
   }
 
-  .limit {
+  .limit,
+  .num-btn {
     width: 100%;
     display: flex;
     justify-content: space-between;
   
     .limit-a,
-    .limit-b {
+    .limit-b,
+    .num{
       width: 43%;
     }
-  }
-
-  .num {
-    width: 43%;
   }
 
   .result {
@@ -74,8 +73,33 @@ select {
   margin-left: -20px;
 
   border: 2px solid #e9f2ff;
-  border-radius: 5px;
-  background-color:#fff;
+  border-radius: 10px;
+  background-color:#f7f8f8;
+  color: #000;
+}
+
+select {
+  width: 110%;
+}
+
+input {
+  appearance: textfield;
+}
+
+.btn {
+  width: 53%;
+}
+
+button {
+  height: 64px;
+  width: 100%;
+  font-size: 20px;
+  margin: 15px 20px;
+
+  border: none;
+  border-radius: 10px;
+  background-color:#007bc1;
+  color: #fff;
 }
 
 option:checked {
