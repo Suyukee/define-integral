@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/define-integral/static/css/main.97ef6b6a.css",
-    "main.js": "/define-integral/static/js/main.4686e9db.js",
+    "main.js": "/define-integral/static/js/main.dec4fafa.js",
     "index.html": "/define-integral/index.html",
     "main.97ef6b6a.css.map": "/define-integral/static/css/main.97ef6b6a.css.map",
-    "main.4686e9db.js.map": "/define-integral/static/js/main.4686e9db.js.map"
+    "main.dec4fafa.js.map": "/define-integral/static/js/main.dec4fafa.js.map"
   },
   "entrypoints": [
     "static/css/main.97ef6b6a.css",
-    "static/js/main.4686e9db.js"
+    "static/js/main.dec4fafa.js"
   ]
 }
