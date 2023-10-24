@@ -1,16 +1,17 @@
 import { useState } from "react";
+import CenterRectangle from "./CenterRectangle";
 import LeftRectangle from "./LeftRectangle";
 import RightRectangle from "./RightRectangle";
 
 function App() {
   
-  const [method, setMethod] = useState('left');
+  const [method, setMethod] = useState('center');
   const [func, setFunc] = useState('x**2');
   const [limitA, setLimitA] = useState('1');
   const [limitB, setLimitB] = useState('10');
   const [num, setNum] = useState('10');
 
-  const [value, setValue] = useState('289.665');
+  const [value, setValue] = useState('332.3925');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +19,9 @@ function App() {
 
   function handleClick() {
 
-    if (method==='left') {
+    if (method==='center') {
+      setValue( <CenterRectangle f={func} a={limitA} b={limitB} n={num} /> )
+    }else if (method==='left') {
         setValue( <LeftRectangle f={func} a={limitA} b={limitB} n={num} /> )
     } else if (method==='right') {
       setValue( <RightRectangle f={func} a={limitA} b={limitB} n={num} /> )
@@ -43,6 +46,7 @@ function App() {
               value={method}
               onChange={(e) => setMethod(e.target.value)}
             >
+              <option value="center">Средних прямоугольников</option>
               <option value="left">Левых прямоугольников</option>
               <option value="right">Правых прямоугольников</option>
             </select>

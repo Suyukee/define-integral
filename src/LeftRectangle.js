@@ -1,15 +1,16 @@
 const LeftRectangle = ({ f, a, b, n }) => {
 
+    a = +a;
     let h = (b - a) / n;
-    let x = +a;
+    let x;
     let y = 0;
 
-    for (let i = 0; i < n; i++) {
+    for (let i = 0; i <= n - 1; i++) {
+      x = a + h * i;
       y += eval(f);
-      x += h;
     }
 
-    return (h * y);
+    return ((h * y).toFixed(10) * 10/10);
 }
  
 export default LeftRectangle;
