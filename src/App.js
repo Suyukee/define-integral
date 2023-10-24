@@ -2,6 +2,8 @@ import { useState } from "react";
 import CenterRectangle from "./CenterRectangle";
 import LeftRectangle from "./LeftRectangle";
 import RightRectangle from "./RightRectangle";
+import Trapezoid from "./Trapezoid";
+import Simpson from "./Simpson";
 
 function App() {
   
@@ -19,13 +21,17 @@ function App() {
 
   function handleClick() {
 
-    if (method==='center') {
+    if (method === 'center') {
       setValue( <CenterRectangle f={func} a={limitA} b={limitB} n={num} /> )
-    }else if (method==='left') {
+    }else if (method === 'left') {
         setValue( <LeftRectangle f={func} a={limitA} b={limitB} n={num} /> )
-    } else if (method==='right') {
+    } else if (method === 'right') {
       setValue( <RightRectangle f={func} a={limitA} b={limitB} n={num} /> )
-    } else setValue(method);
+    } else if (method === 'trapezoid') {
+      setValue( <Trapezoid f={func} a={limitA} b={limitB} n={num} /> );
+    } else if (method === 'simpson') {
+      setValue( <Simpson f={func} a={limitA} b={limitB} n={num} /> );
+    } else setValue('Ошибка');
   }
 
   return (
@@ -49,6 +55,8 @@ function App() {
               <option value="center">Средних прямоугольников</option>
               <option value="left">Левых прямоугольников</option>
               <option value="right">Правых прямоугольников</option>
+              <option value="trapezoid">Трапеций</option>
+              <option value="simpson">Симпсона</option>
             </select>
           </div>
           
