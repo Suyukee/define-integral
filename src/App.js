@@ -1,31 +1,50 @@
 import { useState } from "react";
 import LeftRectangle from "./LeftRectangle";
+import RightRectangle from "./RightRectangle";
 
 function App() {
   
+  const [method, setMethod] = useState('left');
   const [func, setFunc] = useState('x**2');
   const [limitA, setLimitA] = useState('1');
   const [limitB, setLimitB] = useState('10');
   const [num, setNum] = useState('10');
 
-  let result = <LeftRectangle f={func} a={limitA} b={limitB} n={num} />;
+  const [value, setValue] = useState('289.665');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  }
+
+  function handleClick() {
+
+    if (method==='left') {
+        setValue( <LeftRectangle f={func} a={limitA} b={limitB} n={num} /> )
+    } else if (method==='right') {
+      setValue( <RightRectangle f={func} a={limitA} b={limitB} n={num} /> )
+    } else setValue(method);
+  }
 
   return (
     <div className="wrapper">
+
       <header>
         <h3>КАЛЬКУЛЯТОР</h3>
-        <p>Приближённое вычисление определённых интегралов</p>
+        <p>Приближённого вычисление определённых интегралов</p>
       </header>
 
       <div className="content">
         
+        <form onSubmit={handleSubmit}>
 
-        <form>
           <div className="method">
             <p>Квадратурная функция</p>
-            <select>
-              <option value={1}>Левых прямоугольников</option>
-              <option value={2}>Правых прямоугольников</option>
+            <select 
+              value={method}
+              onChange={(e) => setMethod(e.target.value)}
+            >
+              <option value="left">Левых прямоугольников</option>
+              <option value="right">Правых прямоугольников</option>
             </select>
           </div>
           
@@ -40,6 +59,7 @@ function App() {
           </div>
 
           <div className="limit">
+
             <div className="limit-a">
               <p>Начальная граница</p>
               <input 
@@ -59,14 +79,13 @@ function App() {
                 onChange={(e) => setLimitB(e.target.value)} 
               />
             </div>
+
           </div>
 
           <div className="num-btn">
 
             <div className="num">
-
               <p>Число интервалов</p>
-
               <input 
                 type="number"
                 required 
@@ -75,35 +94,17 @@ function App() {
               />
             </div>
 
-
             <div className="btn">
-              <button>
+              <button onClick={handleClick}>
                 Вычислить
               </button>
             </div>
 
           </div>
 
-
-          {/* <div className="float">
-            <p>Знаков после запятой:</p>
-            <div className="slider">
-              <input type="range" min="0" max="10" defaultValue= "3"/>
-              <span className="number">3</span>
-            </div>
-          </div> */}
-
-          {/* <p>{ func }</p>
-          <p>{ limitA }</p>
-          <p>{ limitB }</p>
-          <p>{ num }</p>
-          <p>{ func }</p> */}
-
-          {/* <div>
-            <LeftRectangle f={func} a={limitA} b={limitB} n={num} />
-          </div> */}
-
-          <p className="result">Результат = { result }</p>
+          <p className="result">
+            Результат = { value }
+          </p>
 
         </form>
 

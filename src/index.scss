@@ -80,6 +80,7 @@ select {
 
 select {
   width: 110%;
+  cursor: pointer;
 }
 
 input {
@@ -87,7 +88,7 @@ input {
 }
 
 .btn {
-  width: 53%;
+  width: 52.5%;
 }
 
 button {
@@ -100,17 +101,10 @@ button {
   border-radius: 10px;
   background-color:#007bc1;
   color: #fff;
+
+  cursor: pointer;
 }
 
 option:checked {
   background-color: #9acbe9;
 }
-
-// .slider {
-//   display: flex;
-  
-//   span {
-//     font-size: 20px;
-//     padding: 12px 0 0 20px;
-//   }
-// }
