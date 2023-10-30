@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Inter, system-ui;
@@ -27,29 +33,16 @@ header {
 .content {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 10px;
 
   p {
     margin: 3px;
-    margin-left: -5px;
+    margin-left: 20px;
     padding: 5px;
     position: absolute;
     color: rgb(0, 92, 148);
     background-color: #f7f8f8;
     font-size: 14px;
-  }
-
-  .limit,
-  .num-btn {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  
-    .limit-a,
-    .limit-b,
-    .num{
-      width: 43%;
-    }
   }
 
   .result {
@@ -63,48 +56,57 @@ header {
   }
 }
 
+.limit,
+.num-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  .limit-a,
+  .limit-b,
+  .num,
+  .btn {
+    width: 49%;
+  }
+}
+
+.method,
+.func {
+  text-align: center;
+}
+
 input,
 select {
   height: 60px;
   width: 100%;
-  font-size: 16px;
+  margin: 18px 0;
   padding-left: 35px;
-  margin: 15px 0;
-  margin-left: -20px;
 
+  font-size: 16px;
   border: 2px solid #e9f2ff;
   border-radius: 10px;
   background-color:#f7f8f8;
   color: #000;
 }
 
-select {
-  width: 110%;
-  cursor: pointer;
+button {
+  height: 60px;
+  width: 100%;
+  margin: 15px 0;
+
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color:#007bc1;
+  color: #fff;
 }
 
 input {
   appearance: textfield;
 }
 
-.btn {
-  width: 52.5%;
-}
-
+select,
 button {
-  height: 64px;
-  width: 100%;
-  font-size: 20px;
-  margin: 15px 20px;
-
-  border: none;
-  border-radius: 10px;
-  background-color:#007bc1;
-  color: #fff;
-
   cursor: pointer;
-}
-
-option:checked {
-  background-color: #9acbe9;
 }
