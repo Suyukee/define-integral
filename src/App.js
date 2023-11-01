@@ -22,16 +22,16 @@ function App() {
   function handleClick() {
 
     if (method === 'center') {
-      setValue( <CenterRectangle f={func} a={limitA} b={limitB} n={num} /> )
+      setValue( <CenterRectangle f={func} a={limitA} b={limitB} n={num} /> );
     }else if (method === 'left') {
-        setValue( <LeftRectangle f={func} a={limitA} b={limitB} n={num} /> )
+        setValue( <LeftRectangle f={func} a={limitA} b={limitB} n={num} /> );
     } else if (method === 'right') {
-      setValue( <RightRectangle f={func} a={limitA} b={limitB} n={num} /> )
+      setValue( <RightRectangle f={func} a={limitA} b={limitB} n={num} /> );
     } else if (method === 'trapezoid') {
       setValue( <Trapezoid f={func} a={limitA} b={limitB} n={num} /> );
     } else if (method === 'simpson') {
       setValue( <Simpson f={func} a={limitA} b={limitB} n={num} /> );
-    } else setValue('Ошибка');
+    } else setValue('Ошибка'); 
   }
 
   return (
