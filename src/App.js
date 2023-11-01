@@ -47,7 +47,7 @@ function App() {
         <form onSubmit={handleSubmit}>
 
           <div className="method">
-            <p>Квадратурная функция</p>
+            <p>Метод интегрирования</p>
             <select 
               value={method}
               onChange={(e) => setMethod(e.target.value)}
@@ -73,7 +73,7 @@ function App() {
           <div className="limit">
 
             <div className="limit-a">
-              <p>Начальная граница</p>
+              <p>Нижний предел</p>
               <input 
                 type="number" 
                 required
@@ -83,7 +83,7 @@ function App() {
             </div>
 
             <div className="limit-b">
-              <p>Конечная граница</p>
+              <p>Верхний предел</p>
               <input 
                 type="number" 
                 required
