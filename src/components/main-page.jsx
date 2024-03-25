@@ -24,7 +24,7 @@ const MainPage = () => {
 	return (
 		<main className="wrapper">
 			<header className="header">
-				<h3 className="header__title">КАЛЬКУЛЯТОР123</h3>
+				<h3 className="header__title">КАЛЬКУЛЯТОР</h3>
 				<p className="header__text">Приближённого вычисления определённых интегралов</p>
 			</header>
 
