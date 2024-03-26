@@ -102,7 +102,7 @@ function MainPage() {
 						</div>
 					</div>
 					{value === 'Ошибка' && (
-						<p className="form__error-result">Подынтегральная функция введена неправильно</p>
+						<p className="form__error-result">Неверная подынтегральная функция</p>
 					)}
 					<p className={value === 'Ошибка' ? ' form__error-result' : 'form__result'}>
 						Результат = {value}
