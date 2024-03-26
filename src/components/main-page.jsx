@@ -18,7 +18,7 @@ function MainPage() {
 
 	function handleClick() {
 		// Проверка нет ли пустых полей
-		if (method & func & limitA & limitB & num) {
+		if (method && func && limitA && limitB && num) {
 			const result = useCalculate(method, func, limitA, limitB, num);
 			setValue(result);
 		}
