@@ -27,7 +27,7 @@
 		"**/*.tsx",
 		".next/types/**/*.ts",
 		"src/components/main-page.jsx",
-		"src/hooks/methods.js"
+		"src/hooks/methods.ts"
 	],
 	"exclude": ["node_modules"]
 }

@@ -117,3 +117,12 @@ a {
 	font-size: 18px;
 	color: rgb(0, 92, 148);
 }
+
+.form__error-result {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 3.5px 5px;
+	font-size: 18px;
+	color: rgb(148, 0, 0);
+}

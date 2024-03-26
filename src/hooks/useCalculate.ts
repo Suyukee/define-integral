@@ -1,4 +1,5 @@
 import { centerRectangle, leftRectangle, rightRectangle, simpson, trapezoid } from './methods';
+import { useTry } from './useTry';
 
 enum Methods {
 	CENTER = 'center',
@@ -8,27 +9,34 @@ enum Methods {
 	SIMPSON = 'simpson',
 }
 
-function useCalculate(
+export function useCalculate(
 	method: Methods,
-	f: string,
-	a: string,
-	b: string,
-	n: string,
+	func: string,
+	limitA: string,
+	limitB: string,
+	number: string,
 ): number | 'Ошибка' {
+	const a = +limitA;
+	const b = +limitB;
+	const n = +number;
+
+	// Проверка подынтегральной функции на корректность
+	if (useTry(func) === 'Ошибка') {
+		return 'Ошибка';
+	}
+
 	switch (method) {
 		case Methods.CENTER:
-			return centerRectangle(f, a, b, n);
+			return centerRectangle(func, a, b, n);
 		case Methods.LEFT:
-			return leftRectangle(f, a, b, n);
+			return leftRectangle(func, a, b, n);
 		case Methods.RIGTH:
-			return rightRectangle(f, a, b, n);
+			return rightRectangle(func, a, b, n);
 		case Methods.TRAPEZOID:
-			return trapezoid(f, a, b, n);
+			return trapezoid(func, a, b, n);
 		case Methods.SIMPSON:
-			return simpson(f, a, b, n);
+			return simpson(func, a, b, n);
 		default:
 			return 'Ошибка';
 	}
 }
-
-export default useCalculate;

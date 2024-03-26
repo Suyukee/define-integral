@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import useCalculate from '../hooks/useCalculate';
+import { useCalculate } from '../hooks/useCalculate';
 
-const MainPage = () => {
+function MainPage() {
 	const [method, setMethod] = useState('center');
 	const [func, setFunc] = useState('x**2');
 	const [limitA, setLimitA] = useState('1');
@@ -17,8 +17,11 @@ const MainPage = () => {
 	};
 
 	function handleClick() {
-		const result = useCalculate(method, func, limitA, limitB, num);
-		setValue(result);
+		// Проверка нет ли пустых полей
+		if (method & func & limitA & limitB & num) {
+			const result = useCalculate(method, func, limitA, limitB, num);
+			setValue(result);
+		}
 	}
 
 	return (
@@ -98,12 +101,16 @@ const MainPage = () => {
 							</button>
 						</div>
 					</div>
-
-					<p className="form__result">Результат = {value}</p>
+					{value === 'Ошибка' && (
+						<p className="form__error-result">Подынтегральная функция введена неправильно</p>
+					)}
+					<p className={value === 'Ошибка' ? ' form__error-result' : 'form__result'}>
+						Результат = {value}
+					</p>
 				</form>
 			</div>
 		</main>
 	);
-};
+}
 
 export default MainPage;
