@@ -128,7 +128,7 @@ a {
 	color: rgb(148, 0, 0);
 }
 
-@media (max-width: 550px) {
+@media screen and (orientation: landscape) {
 	.wrapper {
 		margin: 10px auto;
 	}
