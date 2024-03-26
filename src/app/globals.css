@@ -128,7 +128,7 @@ a {
 	color: rgb(148, 0, 0);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 550px) {
 	.wrapper {
 		margin: 10px auto;
 	}
