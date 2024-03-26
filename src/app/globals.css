@@ -131,7 +131,7 @@ a {
 
 @media (max-width: 550px) and (max-height: 625px) {
 	.wrapper {
-		transform: translateY(-90px);
+		transform: translateY(-160px);
 		transition: transform 0.3s ease-in-out;
 	}
 }
