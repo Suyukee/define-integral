@@ -13,7 +13,7 @@
 ## Деплой на Vercel
 
 Приложение можно посмотреть по ссылке:
-[[https://blog-on-react-three.vercel.app/](https://memory-game-nine-beryl.vercel.app/)](https://define-integral.vercel.app/)
+https://define-integral.vercel.app/
 
 ## Примеры
 
