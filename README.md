@@ -1,19 +1,24 @@
-## About the application
+## О приложении
 
-A web application that is my thesis at the university, which allows you to calculate certain integrals numerically
+Веб-приложение, являющееся моей дипломной работой в университете, позволяющее вычислять определенные интегралы численно.
 
-## Realization
+## Реализация
 
-Application created using react, typescript, nextjs, css, BEM-methodology
+Приложение создано с использованием React, Typescript, NextJS, CSS, BEM-методологии.
 
-The site is adapted for all devices
+Типизация на TypeScript
 
-## Deploy on Vercel
+Сайт адаптирован под все устройства
 
-The application can be viewed at the link:
+## Деплой на Vercel
+
+Приложение можно посмотреть по ссылке:
 [[https://blog-on-react-three.vercel.app/](https://memory-game-nine-beryl.vercel.app/)](https://define-integral.vercel.app/)
 
-## Examples
+## Примеры
 
 ![изображение](https://github.com/Suyukee/define-integral/assets/39066019/c5546b2c-5c78-4aaa-93c3-825ff0f09d9c)
 ![изображение](https://github.com/Suyukee/define-integral/assets/39066019/954e6a8f-f4fc-4c20-8a7f-84e4cd196851)
+
+
+
